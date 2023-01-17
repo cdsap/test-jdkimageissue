@@ -30,4 +30,4 @@ jobs:
         - name: Execute Gradle build
           run: ./gradlew clean assembleDebug
           env:
-              GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GRADLE_API_KEY }}
+              GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
