@@ -12,12 +12,12 @@ subprojects {
     }
 }
 
+allprojects {
+     normalization {
+        runtimeClasspath {
+            ignore '**/module-descriptor.txt'
+            ignore '**/java/lang/invoke/**'
+        }
+    }
+}
 
-   // normalization {
-//        runtimeClasspath {
-//            ignore '**/module-descriptor.txt'
-//            // don't need if you are up to date on AGP cache plug in fix
-//            ignore '**/java/lang/invoke/**'
-//        }
-//    }
-//}
