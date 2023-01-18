@@ -19,7 +19,7 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-          path: /home/runner/.gradle/caches/transforms-3/9dea87eed3e13d3b123b5ea58cd9c438/transformed/output/jdkImage/lib/jrt-fs.ja
+          path: /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib/jrt-fs.ja
   different:
     strategy:
         matrix:
@@ -34,11 +34,11 @@ jobs:
         - name: Execute Gradle build
           run: |
                 ./gradlew clean assembleDebug
-                cd /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/
+                cd /home/runner/.gradle/caches/transforms-3/9dea87eed3e13d3b123b5ea58cd9c438/
                 ls
           env:
               GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
         - name: Upload test reports
           uses: actions/upload-artifact@v3
           with:
-            path: /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib/jrt-fs.jar
+            path: /home/runner/.gradle/caches/transforms-3/9dea87eed3e13d3b123b5ea58cd9c438/transformed/output/jdkImage/lib/jrt-fs.jar
