@@ -19,6 +19,7 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
+          name: artifact1
           path: /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib/jrt-fs.jar
   different:
     strategy:
@@ -41,4 +42,5 @@ jobs:
         - name: Upload test reports
           uses: actions/upload-artifact@v3
           with:
+            name: artifact2
             path: /home/runner/.gradle/caches/transforms-3/9dea87eed3e13d3b123b5ea58cd9c438/transformed/output/jdkImage/lib/jrt-fs.jar
