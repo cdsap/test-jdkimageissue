@@ -34,7 +34,7 @@ jobs:
         - name: Execute Gradle build
           run: |
                 ./gradlew clean assembleDebug
-                cp /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib .
+                cd /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib .
                 ls
           env:
               GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
