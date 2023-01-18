@@ -19,8 +19,7 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-            path: /home/runner/.gradle/caches/transforms-3/a8a48bbfd7817297c1473089d6ba65d3/transformed/output/jdkImage/lib/jrt-fs.jar
-
+          path: /home/runner/.gradle/caches/transforms-3/a8a48bbfd7817297c1473089d6ba65d3/transformed/output/jdkImage/lib/jrt-fs.jar
   different:
     strategy:
         matrix:
@@ -37,7 +36,7 @@ jobs:
           env:
               GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
         - name: Upload test reports
-        uses: actions/upload-artifact@v3
-        with:
+          uses: actions/upload-artifact@v3
+          with:
             path: /home/runner/.gradle/caches/transforms-3/3a124b23dc0deaeb471fa38b4fcdd014/transformed/output/jdkImage/lib/jrt-fs.jar
 
