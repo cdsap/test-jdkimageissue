@@ -16,7 +16,8 @@ allprojects {
      normalization {
         runtimeClasspath {
             ignore '**/module-descriptor.txt'
-            ignore '**/java/lang/invoke/**'
+            ignore '**/jdk/internal/jimage/decompressor/**'
+            ignore '**/jdk/internal/jrtfs/**'
         }
     }
 }
