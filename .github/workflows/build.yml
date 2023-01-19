@@ -16,6 +16,8 @@ jobs:
         run: ./gradlew clean assembleDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
+          AGENT_JAVA_VERSION: "${{ matrix.java }}-temurin"              
+          
   zulu:
     strategy:
       matrix:
@@ -32,6 +34,7 @@ jobs:
              ./gradlew clean assembleDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
+          AGENT_JAVA_VERSION: "${{ matrix.java }}-zulu"                    
 
   liberica:
     strategy:
@@ -49,6 +52,7 @@ jobs:
             ./gradlew clean assembleDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
+          AGENT_JAVA_VERSION: "${{ matrix.java }}-liberica"          
 
   adopt:
     strategy:
@@ -66,3 +70,4 @@ jobs:
             ./gradlew clean assembleDebug
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
+          AGENT_JAVA_VERSION: "${{ matrix.java }}-adopt"
