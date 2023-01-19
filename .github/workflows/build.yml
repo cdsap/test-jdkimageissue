@@ -19,7 +19,7 @@ jobs:
   zulu:
     strategy:
       matrix:
-        java: [17.0, 11.0, 11.0.15+10]
+        java: [17.0, 11.0.17+8, 11.0.15+10]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
