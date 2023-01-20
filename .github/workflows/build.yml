@@ -21,7 +21,7 @@ jobs:
   zulu:
     strategy:
       matrix:
-        java: [11.0.17+8, 11.0.16+101, 11.0.16+8, 11.0.15+10]
+        java: [11.0.17+8, 11.0.16+1, 11.0.16+8, 11.0.15+10]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,7 +39,7 @@ jobs:
   liberica:
     strategy:
       matrix:
-        java: [11.0.17+8, 11.0.16+101, 11.0.16+8, 11.0.15+10]
+        java: [11.0.17+7, 11.0.16+101, 11.0.16+8, 11.0.15+10]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
   adopt:
     strategy:
       matrix:
-        java: [11.0.17+8, 11.0.16+101, 11.0.16+8, 11.0.15+10]
+        java: [11.0.17+8, 11.0.16+, 11.0.16+8, 11.0.15+10]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
