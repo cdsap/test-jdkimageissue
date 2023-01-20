@@ -21,8 +21,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact3
-          path: /home/runner/.gradle/caches/transforms-3/0c162a3529f9e5d482989090728acb78/transformed/output/jdkImage/lib/jrt-fs.jar
-          
+          path: /home/runner/.gradle/caches/transforms-3/ce8b16410f5bb7e4035b0763ac3925bb/transformed/output/jdkImage/lib/jrt-fs.jar
   zulu:
     strategy:
       matrix:
@@ -44,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact2
-          path: /home/runner/.gradle/caches/transforms-3/0c162a3529f9e5d482989090728acb78/transformed/output/jdkImage/lib/jrt-fs.jar
+          path: /home/runner/.gradle/caches/transforms-3/8dcebbfbf0b5316d7855ce586e2654f1/transformed/output/jdkImage/lib/jrt-fs.jar
 
 
   liberica:
@@ -68,5 +67,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact1
-          path: /home/runner/.gradle/caches/transforms-3/682fa449874ed1b4907c245cbc02ff63/transformed/output/jdkImage/lib/jrt-fs.jar
+          path: /home/runner/.gradle/caches/transforms-3/ce8b16410f5bb7e4035b0763ac3925bb/transformed/output/jdkImage/lib/jrt-fs.jar
 
