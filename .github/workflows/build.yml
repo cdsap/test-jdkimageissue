@@ -46,7 +46,7 @@ jobs:
         with:
           name: zulu-${{ matrix.java }}
           path: |
-            /home/runner/.gradle/caches/transforms-3/ce8b16410f5bb7e4035b0763ac3925bb/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/**/transformed/output/jdkImage/lib/*
 
 
   liberica:
