@@ -20,12 +20,11 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-          name: temurin-${{ matrix.java }}-118665dae49f4bb57541b1c7e26175b6
-          path: /home/runner/.gradle/caches/transforms-3/118665dae49f4bb57541b1c7e26175b6/transformed/output/jdkImage/lib/*
-          name: temurin-${{ matrix.java }}-99b7153d6bdcdd1a2f468c08fa86fa5a
-          path: /home/runner/.gradle/caches/transforms-3/99b7153d6bdcdd1a2f468c08fa86fa5a/transformed/output/jdkImage/lib/*
-          name: temurin-${{ matrix.java }}-de8d13a4ba0c20cc41ac5193e0e632b7
-          path: /home/runner/.gradle/caches/transforms-3/de8d13a4ba0c20cc41ac5193e0e632b7/transformed/output/jdkImage/lib/*
+          name: temurin-${{ matrix.java }}
+          path: |
+            /home/runner/.gradle/caches/transforms-3/118665dae49f4bb57541b1c7e26175b6/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/99b7153d6bdcdd1a2f468c08fa86fa5a/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/de8d13a4ba0c20cc41ac5193e0e632b7/transformed/output/jdkImage/lib/*
 
   zulu:
     strategy:
@@ -47,14 +46,12 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-          name: zulu-${{ matrix.java }}-6d290f83d3d2843bd15c97eadda7c88e
-          path: /home/runner/.gradle/caches/transforms-3/6d290f83d3d2843bd15c97eadda7c88e/transformed/output/jdkImage/lib/*
-          name: zulu-${{ matrix.java }}-1a2508375073981f50d82e94091c008c
-          path: /home/runner/.gradle/caches/transforms-3/1a2508375073981f50d82e94091c008c/transformed/output/jdkImage/lib/*
-          name: zulu-${{ matrix.java }}-70596245383c5ecb7dc62844d764c8fb
-          path: /home/runner/.gradle/caches/transforms-3/70596245383c5ecb7dc62844d764c8fb/transformed/output/jdkImage/lib/*
-          name: zulu-${{ matrix.java }}-60f5165b5c883e0c741773a3c887e64f
-          path: /home/runner/.gradle/caches/transforms-3/60f5165b5c883e0c741773a3c887e64f/transformed/output/jdkImage/lib/*
+          name: zulu-${{ matrix.java }}
+          path: |
+            /home/runner/.gradle/caches/transforms-3/6d290f83d3d2843bd15c97eadda7c88e/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/1a2508375073981f50d82e94091c008c/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/70596245383c5ecb7dc62844d764c8fb/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/60f5165b5c883e0c741773a3c887e64f/transformed/output/jdkImage/lib/*
 
 
 
@@ -78,10 +75,9 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-          name: liberica-${{ matrix.java }}-ce8b16410f5bb7e4035b0763ac3925bb
-          path: /home/runner/.gradle/caches/transforms-3/ce8b16410f5bb7e4035b0763ac3925bb/transformed/output/jdkImage/lib/*
-          name: liberica-${{ matrix.java }}-1a2508375073981f50d82e94091c008c
-          path: /home/runner/.gradle/caches/transforms-3/1a2508375073981f50d82e94091c008c/transformed/output/jdkImage/lib/*
-          name: liberica-${{ matrix.java }}-81767170db3f2da71ca4f5ea6a381e33
-          path: /home/runner/.gradle/caches/transforms-3/81767170db3f2da71ca4f5ea6a381e33/transformed/output/jdkImage/lib/*
+          name: liberica-${{ matrix.java }}
+          path: |
+            /home/runner/.gradle/caches/transforms-3/ce8b16410f5bb7e4035b0763ac3925bb/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/1a2508375073981f50d82e94091c008c/transformed/output/jdkImage/lib/*
+            /home/runner/.gradle/caches/transforms-3/81767170db3f2da71ca4f5ea6a381e33/transformed/output/jdkImage/lib/*
 
