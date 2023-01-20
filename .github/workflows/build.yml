@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact3
-          path: /home/runner/.gradle/caches/transforms-3/8dcebbfbf0b5316d7855ce586e2654f1/transformed/output/jdkImage/lib/jrt-fs.jar
+          path: /home/runner/.gradle/caches/transforms-3/29e6e2c696d982248426cc19fb6eea4f/transformed/output/jdkImage/lib/jrt-fs.jar
   zulu:
     strategy:
       matrix:
