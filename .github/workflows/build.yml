@@ -80,3 +80,12 @@ jobs:
       - uses: actions/download-artifact@v3
       - name: Display structure of downloaded files
         run: echo ${{ steps.download.outputs.download-path }}         
+  rep:
+    needs: [download]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Display structure of downloaded files
+        run: |
+          echo "1"
+          echo ${{ steps.download.outputs.download-path }}         
