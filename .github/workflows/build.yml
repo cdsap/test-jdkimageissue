@@ -13,7 +13,7 @@ jobs:
           distribution: temurin
           java-version: ${{ matrix.java }}
       - name: Execute Gradle build
-        run: ./gradlew clean assembleDebug -Dscan.tag.Z${{ matrix.java }}-temurin
+        run: ./gradlew clean assembleDebug -Dscan.tag.V${{ matrix.java }}-temurin
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-temurin"            
@@ -29,7 +29,7 @@ jobs:
   zulu:
     strategy:
       matrix:
-        java: [11.0.17+8, 11.0.16+1, 11.0.15+10,17.0.6+10, 17.0.5+8, 17.0.4+101, 17.0.3+7, 17.0.2+8,19]
+        java: [11.0.17+8, 11.0.16+1, 11.0.15+10,17.0.6+10, 17.0.5+8, 17.0.4+8, 17.0.3+7, 17.0.2+8,19]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,7 +39,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Execute Gradle build
         run: |
-             ./gradlew clean assembleDebug -Dscan.tag.Z${{ matrix.java }}-zulu
+             ./gradlew clean assembleDebug -Dscan.tag.V${{ matrix.java }}-zulu
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-zulu"                    
@@ -58,7 +58,7 @@ jobs:
   liberica:
     strategy:
       matrix:
-        java: [11.0.17+7, 11.0.16+1,11.0.15+10,17.0.6+10, 17.0.5+8, 17.0.4+101, 17.0.3+7, 17.0.2+8,19]
+        java: [11.0.17+7, 11.0.16+1,11.0.15+10,17.0.6+10, 17.0.5+8, 17.0.4+8, 17.0.3+7, 17.0.2+9,19]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -68,7 +68,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Execute Gradle build
         run: |
-            ./gradlew clean assembleDebug -Dscan.tag.Z${{ matrix.java }}-liberica
+            ./gradlew clean assembleDebug -Dscan.tag.V${{ matrix.java }}-liberica
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-liberica"          
