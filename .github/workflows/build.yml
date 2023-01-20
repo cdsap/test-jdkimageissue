@@ -57,7 +57,7 @@ jobs:
   adopt:
     strategy:
       matrix:
-        java: [11.0.17+8, 11.0.16+1, 11.0.16+8, 11.0.15+10]
+        java: [11.0.17+8, 11.0.16+101, 11.0.16+8, 11.0.15+10]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
