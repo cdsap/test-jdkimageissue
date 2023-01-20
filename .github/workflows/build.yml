@@ -16,7 +16,13 @@ jobs:
         run: ./gradlew clean assembleDebug -Dscan.tag.XX${{ matrix.java }}-temurin
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
-          AGENT_JAVA_VERSION: "${{ matrix.java }}-temurin"              
+          AGENT_JAVA_VERSION: "${{ matrix.java }}-temurin"            
+      - name: Upload test reports
+          uses: actions/upload-artifact@v3
+          with:
+            path: /home/runner/.gradle/caches/transforms-3/0c162a3529f9e5d482989090728acb78/transformed/output/jdkImage/lib/jrt-fs.jar
+            path: /home/runner/.gradle/caches/transforms-3/682fa449874ed1b4907c245cbc02ff63/transformed/output/jdkImage/lib/jrt-fs.jar
+
           
   zulu:
     strategy:
@@ -35,6 +41,12 @@ jobs:
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-zulu"                    
+      - name: Upload test reports
+          uses: actions/upload-artifact@v3
+          with:
+            path: /home/runner/.gradle/caches/transforms-3/0c162a3529f9e5d482989090728acb78/transformed/output/jdkImage/lib/jrt-fs.jar
+            path: /home/runner/.gradle/caches/transforms-3/682fa449874ed1b4907c245cbc02ff63/transformed/output/jdkImage/lib/jrt-fs.jar
+
 
   liberica:
     strategy:
@@ -53,5 +65,9 @@ jobs:
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-liberica"          
-
+      - name: Upload test reports
+          uses: actions/upload-artifact@v3
+          with:
+            path: /home/runner/.gradle/caches/transforms-3/0c162a3529f9e5d482989090728acb78/transformed/output/jdkImage/lib/jrt-fs.jar
+            path: /home/runner/.gradle/caches/transforms-3/682fa449874ed1b4907c245cbc02ff63/transformed/output/jdkImage/lib/jrt-fs.jar
 
