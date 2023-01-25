@@ -3,6 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven {
+            url 'https://plugins.grdev.net/m2'
+        }
     }
 }
 plugins {
