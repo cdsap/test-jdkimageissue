@@ -12,3 +12,13 @@ subprojects {
     }
 }
 
+
+allprojects {
+    normalization {
+        runtimeClasspath {
+            ignore '**/jdk/internal/jimage/decompressor/**'
+            ignore '**/jdk/internal/jrtfs/**'
+        }
+    }
+}
+
