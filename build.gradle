@@ -18,6 +18,7 @@ allprojects {
         runtimeClasspath {
             ignore '**/jdk/internal/jimage/decompressor/**'
             ignore '**/jdk/internal/jrtfs/**'
+            ignore '**/java/lang/invoke/**'
         }
     }
 }
