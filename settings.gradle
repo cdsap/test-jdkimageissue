@@ -29,5 +29,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+// forcing an third execution without project name
 include ':app'
 include ':lib'
